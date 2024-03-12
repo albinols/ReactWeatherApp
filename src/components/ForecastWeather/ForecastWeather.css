@@ -1,0 +1,108 @@
+.forecast-container {
+  display: flex;
+  width: 80%;
+  height: 300px;
+  gap: 10px;
+}
+
+.forecast-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 20%;
+  /* border: 2px solid rgba(255, 0, 0, 0.5); */
+  /* border: solid; */
+  border-radius: 20px;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.3); 
+}
+
+.forecast-card:hover {
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8); 
+}
+
+.forecast-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex: 1; 
+  margin-top: 20px;
+}
+
+.forecast-info.expanded {
+  justify-content: start;
+  height: 100%;
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+.forecast-date {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.forecast-icon {
+  object-fit: contain;
+  height: 120px;
+  width: 120px;
+}
+
+.forecast-temp {
+  font-size: 20px;
+}
+
+.forecast-card.expanded {
+  width: 40%; 
+  /* margin-top: -15px; 
+  margin-bottom: -15px;  */
+  margin-left: 15px;
+  margin-right: 15px;
+  transform: scale(1.1);
+  /* background-color: #f0f0f0; */
+  gap: 20px;
+}
+
+.forecast-main {
+  display: flex;
+  height: 100%;
+}
+
+.forecast-suntime-div {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.forecast-suntime {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 10px;
+}
+
+.forecast-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1; 
+  gap: 10px;
+  height: 100%;
+}
+
+.forecast-details-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  gap: 10px;
+  margin-left: 50px;
+  margin-right: 15px;
+}
+
+.forecast-detail-icon {
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+}
