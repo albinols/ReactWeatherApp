@@ -14,30 +14,27 @@ const SearchBar = () => {
   const handleSearch = async () => {
 
     if (!location.trim()) {
-      // alert("Please enter a location."); // Simple alert, consider a more user-friendly notification
-      setErrorMessage("Please enter a location.");
-      setTimeout(() => setErrorMessage(''), 5000);
-      return; // Exit the function early if no location input
+      setErrorMessage("Please enter a location");
+      setTimeout(() => setErrorMessage(''), 3000);
+      return; 
     }
 
     try {
       const searchResult = await LocationApi(location)
 
-       // Check if the searchResult is null or empty indicating location not found
       if (!searchResult || (Object.keys(searchResult).length === 0 && searchResult.constructor === Object)) {
-        // alert("Location not found. Please try a different search.");
-        setErrorMessage("Location not found. Please try a different search.");
-        setTimeout(() => setErrorMessage(''), 5000);
+        setErrorMessage("Location not found. Please try a different search");
+        setTimeout(() => setErrorMessage(''), 3000);
         setLocation('');
-        return; // Exit the function early
+        return; 
       }
 
       setCordinates(searchResult);
       setLocation('');
-      setErrorMessage(''); // Clear error message on successful search
+      setErrorMessage('');
     } catch (error) {
-      setErrorMessage("Failed to fetch location data. Please try again.");
-      setTimeout(() => setErrorMessage(''), 5000);
+      setErrorMessage("Failed to fetch location data. Please try again");
+      setTimeout(() => setErrorMessage(''), 3000);
     }
   };
 

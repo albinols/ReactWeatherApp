@@ -49,17 +49,20 @@
 }
 
 .error-message {
+  font-size: 24px;
   color: #D8000C;
-  background-color: #FFD2D2;
+  background-color: whitesmoke;
+  /* background-color: #FFD2D2; */
   padding: 10px;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   width: fit-content;
-  max-width: 600px; 
+  max-width: 800px; 
   text-align: left;
   position: absolute;
   top: 12%;
-  border: 1px solid black;
+  border: 3px solid black;
+  box-sizing: border-box; 
   animation: flashBorder 2s infinite;
 }
 

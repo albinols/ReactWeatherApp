@@ -14,20 +14,6 @@ const StateContextProvider = ({children}) => {
   const [backgroundClass, setBackgroundClass] = useState('day-background');
   const [errorMessage, setErrorMessage] = useState('');
 
-  // useEffect(() => {
-  //   // Fetch default location coordinates when the component mounts
-  //   const fetchDefaultLocation = async () => {
-  //     try {
-  //       const defaultLocationCordinates = await LocationApi(location);
-  //       setCordinates(defaultLocationCordinates);
-  //     } catch (error) {
-  //       console.error('Error fetching default location coordinates:', error);
-  //     }
-  //   };
-
-  //   fetchDefaultLocation();
-  // }, []); // Empty dependency array ensures the effect runs only once on mount
-
   console.log('New API Data:',weatherData)
 
   const contextValue = {

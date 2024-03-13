@@ -10,7 +10,7 @@ const WeatherApi = () => {
       setLoading(true); // Set loading to true before fetching data
 
       try {
-        const apiKey = "";
+        const apiKey = import.meta.env.VITE_API_KEY;
         const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${cordinates.lat}&lon=${cordinates.lon}&appid=${apiKey}&units=metric`;
 
         const response = await fetch(url);
